@@ -1,0 +1,9 @@
+en:
+    lib_guides_search:
+      display_name: "LibGuides"
+      short_display_name: "LibGuides"
+      search_form_placeholder: "Search LibGuides"
+      module_callout: "Search LibGuides"
+      error_service_mesasge: "searching LibGuides"
+      no_results_service_message: "a different search"
+      no_results_link: "http://lib.guides.umd.edu/"
