@@ -7,16 +7,14 @@ require "quick_search/lib_guides_searcher/version"
 Gem::Specification.new do |s|
   s.name        = "quick_search-lib_guides_searcher"
   s.version     = QuickSearch::LibGuidesSearcher::VERSION
-  s.authors     = ["David P. Steelman"]
-  s.email       = ["dsteelma@umd.edu"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of QuickSearch::LibGuidesSearcher."
-  s.description = "TODO: Description of QuickSearch::LibGuidesSearcher."
-  s.license     = "MIT"
+  s.authors     = ["UMD Libraries"]
+  s.email       = ["lib-ssdr@umd.edu"]
+  s.homepage    = "https://www.lib.umd.edu/"
+  s.summary     = "LibGuides searcher for NCSU Quick Search"
+  s.description = "LibGuides searcher for NCSU Quick Search."
+  s.license     = "Apache 2.0"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  s.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", "~> 5.0.0"
-
-  s.add_development_dependency "sqlite3"
+  s.add_dependency "quick_search-core", '~> 0'
 end
