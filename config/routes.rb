@@ -1,2 +1,2 @@
-QuickSearch::LibGuidesSearcher::Engine.routes.draw do
+QuickSearchLibGuidesSearcher::Engine.routes.draw do
 end

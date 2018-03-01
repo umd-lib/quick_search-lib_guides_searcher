@@ -1,7 +1,5 @@
-module QuickSearch
-  module LibGuidesSearcher
-    class Engine < ::Rails::Engine
-      isolate_namespace QuickSearch::LibGuidesSearcher
-    end
+module QuickSearchLibGuidesSearcher
+  class Engine < ::Rails::Engine
+    isolate_namespace QuickSearchLibGuidesSearcher
   end
 end

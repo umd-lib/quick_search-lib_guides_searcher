@@ -6,7 +6,7 @@ require "quick_search/lib_guides_searcher/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "quick_search-lib_guides_searcher"
-  s.version     = QuickSearch::LibGuidesSearcher::VERSION
+  s.version     = QuickSearchLibGuidesSearcher::VERSION
   s.authors     = ["UMD Libraries"]
   s.email       = ["lib-ssdr@umd.edu"]
   s.homepage    = "https://www.lib.umd.edu/"
