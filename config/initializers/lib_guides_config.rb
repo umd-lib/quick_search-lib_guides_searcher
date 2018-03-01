@@ -6,4 +6,4 @@ else
   # otherwise load the default config file
   config_file = File.expand_path("../../lib_guides_config.yml", __FILE__)
 end
-QuickSearch::Engine::LIB_GUIDES_CONFIG = YAML.load_file(config_file)[Rails.env]
+QuickSearch::Engine::LIB_GUIDES_CONFIG = YAML.load(ERB.new(File.read(config_file)).result)[Rails.env]
