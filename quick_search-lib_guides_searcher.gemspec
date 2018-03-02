@@ -18,4 +18,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'quick_search-core', '~> 0'
   s.add_development_dependency 'rubocop', '= 0.52.1'
+  # sqlite3 loaded for testing with the "dummy" application
+  s.add_development_dependency 'sqlite3'
 end

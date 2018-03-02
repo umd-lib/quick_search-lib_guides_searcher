@@ -140,6 +140,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    sqlite3 (1.3.13)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
       ref
@@ -158,6 +159,7 @@ PLATFORMS
 DEPENDENCIES
   quick_search-lib_guides_searcher!
   rubocop (= 0.52.1)
+  sqlite3
 
 BUNDLED WITH
    1.16.1
