@@ -1,15 +1,14 @@
 module QuickSearch
+  # QuickSearch seacher for LibGuides
   class LibGuidesSearcher < QuickSearch::Searcher
-
     def search
       resp = @http.get(base_url)
       @response = JSON.parse(resp.body)
     end
 
-    def results
+    def results # rubocop:disable Metrics/MethodLength
       if results_list
         results_list
-
       else
         @results_list = []
 
@@ -23,11 +22,13 @@ module QuickSearch
 
         @results_list
       end
-
     end
 
     def base_url
-      QuickSearch::Engine::LIB_GUIDES_CONFIG['base_url'] + QuickSearch::Engine::LIB_GUIDES_CONFIG['key'] + QuickSearch::Engine::LIB_GUIDES_CONFIG['query_params'] + http_request_queries['not_escaped']
+      QuickSearch::Engine::LIB_GUIDES_CONFIG['base_url'] +
+        QuickSearch::Engine::LIB_GUIDES_CONFIG['key'] +
+        QuickSearch::Engine::LIB_GUIDES_CONFIG['query_params'] +
+        http_request_queries['not_escaped']
     end
 
     def total
@@ -37,7 +38,5 @@ module QuickSearch
     def loaded_link
       QuickSearch::Engine::LIB_GUIDES_CONFIG['loaded_link'] + http_request_queries['uri_escaped']
     end
-
-
   end
 end

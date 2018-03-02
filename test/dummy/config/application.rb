@@ -3,7 +3,8 @@ require_relative 'boot'
 require 'rails/all'
 
 Bundler.require(*Rails.groups)
-require "quick_search/lib_guides_searcher"
+require 'quick_search'
+require 'quick_search/lib_guides_searcher'
 
 module Dummy
   class Application < Rails::Application
@@ -12,4 +13,3 @@ module Dummy
     # -- all .rb files in that directory are automatically loaded.
   end
 end
-
