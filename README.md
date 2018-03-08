@@ -27,7 +27,6 @@ Customize the configuration files at:
 ```
 config/locale/en.yml
 config/lib_guides_config.yml
-
 ```
 
 ## Configuration
