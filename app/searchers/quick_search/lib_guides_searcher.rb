@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module QuickSearch
-  # QuickSearch seacher for LibGuides
+  # QuickSearch searcher for LibGuides
   class LibGuidesSearcher < QuickSearch::Searcher
     def search
       resp = @http.get(base_url)
@@ -31,7 +31,7 @@ module QuickSearch
       QuickSearch::Engine::LIB_GUIDES_CONFIG['base_url'] +
         QuickSearch::Engine::LIB_GUIDES_CONFIG['key'] +
         QuickSearch::Engine::LIB_GUIDES_CONFIG['query_params'] +
-        CGI.escape(sanitized_user_search_query)
+        percent_encoded_raw_user_search_query
     end
 
     def total
@@ -39,15 +39,13 @@ module QuickSearch
     end
 
     def loaded_link
-      QuickSearch::Engine::LIB_GUIDES_CONFIG['loaded_link'] + sanitized_user_search_query
+      QuickSearch::Engine::LIB_GUIDES_CONFIG['loaded_link'] + percent_encoded_raw_user_search_query
     end
 
-    # Returns the sanitized search query entered by the user, skipping
+    # Returns the percent-encoded search query entered by the user, skipping
     # the default QuickSearch query filtering
-    def sanitized_user_search_query
-      # Need to use "to_str" as otherwise Japanese text isn't returned
-      # properly
-      sanitize(@q).to_str
+    def percent_encoded_raw_user_search_query
+      CGI.escape(@q)
     end
   end
 end
