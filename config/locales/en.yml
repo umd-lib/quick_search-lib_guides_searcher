@@ -1,0 +1,16 @@
+# Localization
+#
+# Replace the following placeholders with the correct values for
+# your installation.
+#
+# <NO_RESULTS_LINK>: The link for your site when there are no results
+
+en:
+  lib_guides_search:
+    display_name: "LibGuides"
+    short_display_name: "LibGuides"
+    search_form_placeholder: "Search LibGuides"
+    module_callout: "Search LibGuides"
+    error_service_message: "searching LibGuides"
+    no_results_service_message: "a different search from LibGuides"
+    no_results_link: "<NO_RESULTS_LINK>"

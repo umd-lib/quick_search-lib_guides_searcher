@@ -1,0 +1,26 @@
+# Configuration
+#
+# Replace the following placeholders with the correct values for
+# your installation.
+#
+# <YOUR_API_KEY>: The API key to use
+# <SITE_ID>: The id for your site
+# <LOADED_LINK>: The direct link to your LibGuides site
+
+defaults: &defaults
+  base_url: "http://lgapi-us.libapps.com/1.1/guides/?key="
+  query_params: "&site_id=<SITE_ID>&sort_by=relevance&search_terms="
+  loaded_link: "<LOADED_LINK>"
+  key: "<YOUR_API_KEY>"
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+staging:
+  <<: *defaults
+
+production:
+  <<: *defaults
