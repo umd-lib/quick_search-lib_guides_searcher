@@ -8,7 +8,7 @@
 # <LOADED_LINK>: The direct link to your LibGuides site
 
 defaults: &defaults
-  base_url: "http://lgapi-us.libapps.com/1.1/guides/?key="
+  base_url: "https://lgapi-us.libapps.com/1.1/guides/?key="
   query_params: "&site_id=<SITE_ID>&sort_by=relevance&search_terms="
   loaded_link: "<LOADED_LINK>"
   key: "<YOUR_API_KEY>"
